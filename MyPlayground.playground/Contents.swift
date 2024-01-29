@@ -18,10 +18,10 @@ class TextArtView: UIView {
 
     private func setupTextView() {
         textView = UITextView(frame: self.bounds)
-        textView.font = UIFont.monospacedSystemFont(ofSize: 5, weight: .regular)
+        textView.font = UIFont.monospacedSystemFont(ofSize: 5, weight: .regular) // 使用小字体以显示更细致的图案
         textView.isEditable = false
         textView.isSelectable = false
-        textView.textAlignment = .center
+        textView.textAlignment = .center // 文本居中
         addSubview(textView)
     }
 
@@ -32,7 +32,7 @@ class TextArtView: UIView {
 
     private func generateTextArt() -> String {
         var art = ""
-        let size = 21 
+        let size = 21 // 使用奇数尺寸以便居中
 
         for i in 0..<size {
             for j in 0..<size {
@@ -55,3 +55,4 @@ class TextArtView: UIView {
 // Set the size of the view port
 let textArtView = TextArtView(frame: CGRect(x: 0, y: 0, width: 320, height: 320))
 PlaygroundPage.current.liveView = textArtView
+
